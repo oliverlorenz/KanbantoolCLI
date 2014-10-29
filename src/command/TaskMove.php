@@ -16,7 +16,11 @@ use \Curl\Curl;
 
 class TaskMove extends Command
 {
+    /**
+     * @var Configuration
+     */
     protected $config;
+
     protected $input;
     protected $output;
 
@@ -38,10 +42,15 @@ class TaskMove extends Command
         ;
     }
 
+    protected function getRootDirectory()
+    {
+        return realpath(dirname(__FILE__) . '/../..');
+    }
+
     protected function getConfigPaths()
     {
         return array(
-            getcwd() . '/src/config',
+            $this->getRootDirectory() . '/src/config',
         );
     }
 
