@@ -1,5 +1,5 @@
 {
-    "name": "oliverlorenz/phpKanbantoolCLI",
+    "name": "oliverlorenz/php-kanbantool-cli",
     "require": {
         "symfony/console": "2.5.*",
         "symfony/config": "2.5.*",
